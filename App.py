@@ -5,7 +5,7 @@ import re
 import string
 from itertools import product
 from camel_tools.dialectid import DialectIdentifier
-
+from config import *
 def clean_text(text):
     text = text.replace('وو', 'و')
     text = text.replace('يي', 'ي')
@@ -21,7 +21,7 @@ def clean_text(text):
 
 def main ():
 
-    data_path = '/home/ekhlas/ASR_competition/Round_1/Data/wiki_sqlite3.db'
+    data_path = ALL_DATA_PATH + '/wiki_sqlite3.db'
     # Create your connection.
     cnx = sqlite3.connect(data_path)
 
